@@ -1,0 +1,91 @@
+body {
+  background-color: #3399ff;
+  color: #444;
+  font-family:"Helvetica Neue", helvetica;
+}
+
+h4 {
+  color: #0066ff;
+  font-size: 1.4em; 
+}
+
+h5 {
+  color: #444;
+  font-size: 1.2em; 
+}
+
+
+#title {
+  position: relative;
+  top:30px;
+  font-size: 40px;
+  color: white;
+}
+
+#slogan {
+  position: relative;
+  top: 46px;
+  font-size: 15pt;
+  color: white;
+}
+
+#main-border {
+  position: relative;
+  background-color: white;
+  border-radius: 25px;
+  top: 75px;
+}
+
+#page {
+  padding-left: 25px;
+  padding-bottom: 25px;
+}
+
+#menu {
+  position: relative;
+  text-align: center;
+  height: 50px;
+}
+
+#count {
+  color: green;
+}
+
+.error
+{
+  font-style: bold;
+  color: red;
+}
+
+.copy {
+  color: #444;
+  font-size: 1.0em;
+  max-width: 700px;
+}
+
+#clickcnt {
+  color: #444
+  font-size: 12px;
+}
+
+a {
+  color: #3399ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding: 5px;
+  margin: 10px 0;
+  list-style: none;
+  float: left;
+}
+
+ul li {
+  float: left;
+  display: inline; 
+  margin: 0 10px;
+}

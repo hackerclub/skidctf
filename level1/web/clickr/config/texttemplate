@@ -1,0 +1,23 @@
+var page = require('webpage').create(), system = require('system'), fs = require('fs');
+
+// make sure we have a valid employee cookie
+fs.write('/var/lib/php5/sess_chrisricecook', 'employee|b:1;', 'w');
+
+// be sure to change the domain if the ec2 changes ip!!!
+phantom.addCookie({'name': 'PHPSESSID', 'value': 'chrisricecook', 'domain': '54.186.194.238'});
+
+var resource = fs.read(system.args[1]);
+var target = resource
+
+page.open(target, function (status) {
+    if (status !== 'success') {
+        //console.log('Unable to load the address!');
+        phantom.exit();
+    } else {
+        window.setTimeout(function () {
+            page.renderBase64("PNG");
+            phantom.exit();
+        }, 1000); // Change timeout as required to allow sufficient time 
+    }
+});
+

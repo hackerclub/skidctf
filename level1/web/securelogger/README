@@ -1,0 +1,6 @@
+Title: SecureLogger
+Author: mike_pizza
+
+Catch all hacking attempts with SecureLogger!
+
+Must be a writeable directory named 'tmp' in the document root.

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h2>Password Reset Confirmation</h2>
+
+  {% if success %}
+    <div class="success">Password Reset Successful</div>
+  {% endif %}
+
+  {% for message in form.token.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+
+  {% for message in form.password.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  
+  <form action="{{ url_for('resetconfirm') }}" method=post>
+    
+    {{ form.token.label}}
+    {{ form.token }}
+
+    {{ form.password.label }}
+    {{ form.password }}
+
+    {{ form.confirm.label }}
+    {{ form.confirm }}
+    
+    {{ form.submit }}
+  </form>
+  
+{% endblock %} 
